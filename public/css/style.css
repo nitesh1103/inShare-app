@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: lightblue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-container {
+  background: #ffffff;
+  width: 500px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px 20px rgba(0, 0, 0, 0.2);
+}
+
+.download-icon {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.download-btn a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 20px;
+  color: #ffffff;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+
+
+
+
