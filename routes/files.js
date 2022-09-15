@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
     };
 
     // 3- Validate request.
-    //console.log(req.file);
+    // console.log(req.file);
     if( !req.file ) {
       return res.status(422).json({ error: 'All fields are required!' });
     };
@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
 
     try {
       const result = await file.save();
-      console.log(result);
+      //console.log(result);
       // 5- Send response(sending link in res).
       return res.json({ file: `${process.env.APP_BASE_URL}/files/${result.uuid}` });
       // <http://localhost:3000>/files/<uuid>
@@ -59,7 +59,7 @@ router.post('/', (req, res) => {
 
 // route for send email.
 router.post('/send', async (req, res) => {
-  //console.log(req.body);
+  // console.log(req.body);
   const { uuid, emailFrom, emailTo } = req.body;
   // 1- Validate request.
   if( !uuid || !emailFrom || !emailTo ) {
@@ -72,7 +72,7 @@ router.post('/send', async (req, res) => {
     if( !file ) {
       return res.status(500).json({ error: 'Something went wrong.' });
     };
-    console.log(file);
+    // console.log(file);
 
     if( file.sender ) {
       return res.status(422).json({ error: 'Email already sent.' });
@@ -80,7 +80,7 @@ router.post('/send', async (req, res) => {
     file.sender = emailFrom;
     file.receiver = emailTo;
     const result = await file.save();
-    console.log(result);
+    // console.log(result);
 
     // send email using nodemailer.
     const sendEmail = require('../services/emailService');
@@ -98,7 +98,7 @@ router.post('/send', async (req, res) => {
     });
 
     // Send res.
-    return res.json({ success: 'Email sent successfully.' });
+    return res.json({ success: true });
   }
   catch(err) {
     return res.status(500).json({ error: 'Something went wrong.' });

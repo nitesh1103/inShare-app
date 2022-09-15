@@ -21,7 +21,7 @@ async function sendEmail({ from, to, subject, text, html }) {
     text: text,
     html: html
   });
-  console.log(info);
+  // console.log(info);
 };
 
 module.exports = sendEmail;

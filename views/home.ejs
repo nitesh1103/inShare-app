@@ -1,0 +1,60 @@
+
+<section class="home-section">
+  <div class="row">
+    <div class="home-col-left">
+
+      <div class="upload-container">
+        <div class="file-drop-zone">
+          <div class="img-wrapper">
+            <img src="/img/file.svg" class="left" alt="">
+            <img src="/img/file.svg" class="right" alt="">
+            <img src="/img/file.svg" class="center" alt="">
+          </div>
+          <input type="file" id="fileInput">
+          <div class="drop-title">Drop your File here or, <span id="browseBtn">Browse</span></div>
+        </div>
+    
+        <div class="progress-container">
+          <div class="progress-background"></div>
+          <div class="inner-wrapper">
+            <div class="title">Uploading...</div>
+            <div class="percentCount">0%</div>
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+    
+        <div class="result-container">
+          <p class="res-title">Link expires in 24 hrs</p>
+          <div class="input-container">
+            <input type="text" id="resultInput" readonly>
+            <div class="copy-box">
+              <img src="/img/copy-icon.svg" class="copy-icon" alt="copy-img">
+            </div>
+          </div>
+    
+          <h4 class="email-title">Or Send via Email</h4>
+          <div class="form-container">
+            <form id="email-form" class="email-form">
+              <div class="email-field-wrapper">
+                <label for="sender">Sender's email</label>
+                <input name="emailFrom" type="email" id="sender" class="email-input" required>
+              </div>
+              <div class="email-field-wrapper">
+                <label for="receiver">Receiver's email</label>
+                <input name="emailTo" type="email" id="receiver" class="email-input" required>
+              </div>
+              <button type="submit" class="sendBtn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    
+    <div class="home-col-right">
+      <img src="/img/undraw-upload.svg" class="hero-img" alt="Hero-svg">
+    </div>
+  </div>
+</section>
+
+<div class="success-alert"></div>
